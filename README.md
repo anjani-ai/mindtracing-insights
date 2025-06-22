@@ -1,73 +1,40 @@
-# Welcome to your Lovable project
+# 🧠 MindTracing Insights
 
-## Project info
+> Your AI-powered mental health journaling companion — built with open-source LLMs to analyze emotions, detect thought patterns, and suggest personalized affirmations & prompts.
+---
 
-**URL**: https://lovable.dev/projects/46a261c4-f98c-4357-a9f2-70a77ccda3ea
+## ✨ Inspiration
 
-## How can I edit this code?
+Mental health journaling is a powerful tool — but many people struggle to reflect deeply or recognize patterns in their thoughts. We wanted to build an AI companion that doesn't just listen, but helps users understand and improve their emotional well-being over time.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 💡 What It Does
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/46a261c4-f98c-4357-a9f2-70a77ccda3ea) and start prompting.
+MindTracing allows users to write daily journal entries. It uses an open-source LLM to:
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🧠 Detect and summarize emotional tone
+- 🔁 Analyze recurring thought patterns (like stress or self-doubt)
+- 🌱 Suggest a personalized CBT-based affirmation
+- 📝 Provide a reflective journaling prompt for tomorrow
+- 📊 Track mood trends over time (coming soon!)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ How We Built It
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **LLM:** [Zephyr-7B (HuggingFace)](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) – powerful open-source model for emotional analysis
+- **Framework:** Streamlit – lightweight and fast UI
+- **Logic:** Prompt engineering with multiple chained tasks per journal
+- **Storage:** Local session or JSON file (SQLite optional)
+- **Visualization:** Matplotlib / Plotly for mood trends
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧩 Prompt Flow (LLM Chain)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/46a261c4-f98c-4357-a9f2-70a77ccda3ea) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```text
+1. Analyze tone and emotion from journal text
+2. Detect recurring negative/positive themes across entries
+3. Generate a short affirmation using CBT techniques
+4. Suggest a journaling prompt to reflect deeper tomorrow
